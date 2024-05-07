@@ -1,0 +1,148 @@
+/* --------------------------------------------------- Navbar ----------------------------------------*/
+.navBar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logoTn {
+  width: 30%;
+}
+
+/* --------------------------------------------------- Hamburger ----------------------------------------*/
+
+.hamburger {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+}
+
+.burger {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: black;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --------------------------------------------------- ACCUEIL ----------------------------------------*/
+.accueilContainer {
+  background-color: white;
+  margin: 0;
+}
+
+.infoAvatar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.blocInfo {
+  background-color: rgb(251, 254, 254);
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  text-align: left;
+}
+
+.myName {
+  background-color: white;
+}
+
+.myTitle {
+  background-color: white;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 50%;
+}
+
+/* --------------------------------------------------- Portfolio ----------------------------------------*/
+
+.portfolioContainer {
+  background-color: brown;
+  margin: 0;
+}
+
+.portfolioBloc {
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+/* --------------------------------------------------- Contact ----------------------------------------*/
+.contactContainer {
+  background-color: beige;
+  margin: 0;
+}
+
+/* --------------------------------------------------- Media Screen ----------------------------------------*/
+
+@media (max-width: 768px) {
+  .navBar {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu.closed {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: solid black 1px;
+  }
+
+  .Hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .navBar {
+    gap: 2rem;
+  }
+  .menu {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu.closed {
+    display: flex;
+    height: 100%;
+    gap: 3rem;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .Hamburger {
+    display: none;
+  }
+}
