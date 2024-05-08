@@ -3,6 +3,10 @@
   src: url(./assets/fonts/Roboto-Black.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url(./assets/fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+}
 /* --------------------------------------------------- Navbar ----------------------------------------*/
 .navBar {
   width: 100%;
@@ -11,12 +15,12 @@
   flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
 .logoTn {
   width: 30%;
 }
-
 /* --------------------------------------------------- Hamburger ----------------------------------------*/
 
 .hamburger {
@@ -32,7 +36,7 @@
   width: 2rem;
   height: 0.25rem;
   border-radius: 10px;
-  background-color: black;
+  background-color: #3b3b40;
   transform-origin: 1px;
   transition: all 0.3s linear;
 }
@@ -47,6 +51,7 @@
 .accueilContainer {
   background-color: white;
   margin: 0;
+  min-width: 600px;
 }
 
 .infoAvatar {
@@ -61,6 +66,7 @@
   flex-direction: column;
   width: 500px;
   text-align: left;
+  justify-content: center;
 }
 
 .myName {
@@ -73,26 +79,83 @@
 
 .avatar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  height: 50%;
 }
 
 .avatar img {
-  width: 50%;
+  width: 60%;
+  filter: drop-shadow(10px 7px 10px orange);
+}
+
+.description {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
 }
 
 /* --------------------------------------------------- Portfolio ----------------------------------------*/
 
 .portfolioContainer {
-  background-color: brown;
+  border: solid brown 2px;
   margin: 0;
+  min-width: 20%;
 }
 
 .portfolioBloc {
-  background-color: aqua;
+  border: solid aqua 2px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.kaleienContainer {
+  border: solid blueviolet 2px;
+  min-width: 600px;
+  min-height: 500px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
+.titleKaleien {
+  width: 100%;
+}
+.mobileKaleien {
+  width: 300px;
+}
+.mobileKaleien img {
+  width: 60%;
+}
+.deskKaleien {
+  width: 300px;
+}
+.deskKaleien img {
+  width: 100%;
+}
+
+.kaleienDesc {
+  width: 300px;
+  text-align: left;
+}
+
+.lazyflicksContainer {
+  border: solid gold 2px;
+  width: 300px;
+  height: 500px;
+}
+
+.logoHardSkill {
+  width: 300px;
+}
+
+.logoHardSkill img {
+  width: 20%;
+}
+
 /* --------------------------------------------------- Contact ----------------------------------------*/
 .contactContainer {
   background-color: beige;
@@ -102,6 +165,9 @@
 /* --------------------------------------------------- Media Screen ----------------------------------------*/
 
 @media (max-width: 768px) {
+  #root {
+    text-align: center;
+  }
   .navBar {
     align-items: center;
     justify-content: space-between;
@@ -124,6 +190,10 @@
 
   .Hamburger {
     display: block;
+  }
+
+  .avatar {
+    justify-content: center;
   }
 }
 
@@ -149,5 +219,11 @@
 
   .Hamburger {
     display: none;
+  }
+
+  .infoAvatar {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
   }
 }

@@ -6,7 +6,7 @@ main {
 }
 
 a {
-  color: black;
+  color: #3b3b40;
   text-decoration: inherit;
   font-family: "Roboto", sans-serif;
 }
@@ -28,11 +28,13 @@ h1 {
 }
 
 h2 {
-  color: black;
+  color: #3b3b40;
+  font-family: "Raleway";
+  margin: 0;
 }
 
 h3 {
-  color: black;
+  color: #3b3b40;
 }
 
 button {

@@ -13,13 +13,13 @@ function Navbar() {
 
   return (
     <nav className="navBar">
-      <span>
+      <Link to="/">
         <img
           className="logoTn"
           src="./src/assets/Logo-TN-noir.svg"
           alt="Logo"
         />
-      </span>
+      </Link>
       <div className={`menu ${menuOpen ? "open" : "closed"}`}>
         <Link to="/" onClick={toggleMenu}>
           <h2>Accueil</h2>
