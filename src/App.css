@@ -85,7 +85,7 @@
 
 .avatar img {
   width: 60%;
-  filter: drop-shadow(10px 7px 10px orange);
+  filter: drop-shadow(10px 7px 10px rgb(182, 182, 182));
 }
 
 .description {
@@ -97,71 +97,82 @@
 /* --------------------------------------------------- Portfolio ----------------------------------------*/
 
 .portfolioContainer {
-  border: solid brown 2px;
   margin: 0;
   min-width: 20%;
 }
 
 .portfolioBloc {
-  border: solid aqua 2px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.kaleienContainer {
-  border: solid blueviolet 2px;
-  min-width: 600px;
+.projectContainer {
+  border: solid #5e5e60 3px;
+  max-width: 900px;
   min-height: 500px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .titleKaleien {
   width: 100%;
 }
-.mobileKaleien {
+.mobileMockup {
   width: 300px;
 }
-.mobileKaleien img {
-  width: 60%;
+.mobileMockup img {
+  filter: drop-shadow(10px 7px 10px rgb(182, 182, 182));
+  width: 80%;
 }
-.deskKaleien {
+.deskMockup {
   width: 300px;
 }
-.deskKaleien img {
+.deskMockup img {
+  filter: drop-shadow(10px 7px 10px rgb(182, 182, 182));
   width: 100%;
 }
 
-.kaleienDesc {
+.projectDesc {
   width: 300px;
   text-align: left;
 }
 
-.lazyflicksContainer {
-  border: solid gold 2px;
-  width: 300px;
-  height: 500px;
-}
-
 .logoHardSkill {
+  display: flex;
   width: 300px;
+  justify-content: space-around;
 }
 
 .logoHardSkill img {
-  width: 20%;
+  width: 10%;
 }
 
 /* --------------------------------------------------- Contact ----------------------------------------*/
 .contactContainer {
-  background-color: beige;
   margin: 0;
 }
+form {
+  margin-top: 20px;
+}
 
+.formRow {
+  margin: 10px 0 20px 0;
+}
+.form-control {
+  max-width: 500px;
+  max-height: 200px;
+}
+
+.formInput {
+  padding: 15px 10px;
+}
 /* --------------------------------------------------- Media Screen ----------------------------------------*/
 
 @media (max-width: 768px) {
@@ -170,7 +181,7 @@
   }
   .navBar {
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .menu.closed {
     display: none;
@@ -194,6 +205,12 @@
 
   .avatar {
     justify-content: center;
+  }
+
+  .projectContainer {
+    flex-direction: column;
+    padding: 20px;
+    gap: 3rem;
   }
 }
 
