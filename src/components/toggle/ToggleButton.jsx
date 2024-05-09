@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LightModeContext } from "./ThemeContext";
+import { LightModeContext } from "../ThemeContext";
 
 export default function ToggleButton() {
   const { lightMode, setLightMode } = useContext(LightModeContext);

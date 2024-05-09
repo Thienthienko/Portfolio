@@ -1,5 +1,5 @@
-import Kaleien from "../components/Kaleien";
-import LazyFlicks from "../components/LazyFlicks";
+import Kaleien from "../components/kaleien/Kaleien";
+import LazyFlicks from "../components/lazyflicks/LazyFlicks";
 
 function Portfolio() {
   return (

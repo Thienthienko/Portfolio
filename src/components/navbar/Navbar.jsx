@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Hamburger from "./Hamburger";
-import ToggleButton from "./ToggleButton";
+import Hamburger from "../hamburger/Hamburger";
+import ToggleButton from "../toggle/ToggleButton";
+import ToggleLogo from "../toggle/ToggleLogo";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState(false);
+
+  const handleChangeActive = () => {
+    setActive((logo) => {
+      return !logo;
+    });
+  };
 
   const toggleMenu = () => {
     if (window.innerWidth <= 768) {
@@ -16,11 +24,7 @@ function Navbar() {
     <div>
       <nav className="navBar">
         <Link className="linkLogo" to="/">
-          <img
-            className="logoTn"
-            src="./src/assets/Logo-TN-noir.svg"
-            alt="Logo"
-          />
+          <ToggleLogo active={active} handleChangeActive={handleChangeActive} />
         </Link>
         <div className={`menu ${menuOpen ? "open" : "closed"}`}>
           <Link to="/" onClick={toggleMenu}>

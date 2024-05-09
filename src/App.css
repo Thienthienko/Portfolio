@@ -8,12 +8,6 @@
   src: url(./assets/fonts/Raleway-VariableFont_wght.ttf) format("truetype");
 }
 
-main {
-  text-align: center;
-  background-color: white;
-  font-family: "Roboto", sans-serif;
-}
-
 /* --------------------------------------------------- Navbar ----------------------------------------*/
 .navBar {
   width: 100%;
@@ -34,6 +28,16 @@ main {
   padding: 0;
   width: 10%;
   align-items: center;
+  height: 50px;
+}
+
+.toggle-wrapper {
+  position: relative;
+  height: 50px;
+}
+
+.toggle-wrapper img {
+  position: absolute;
   height: 50px;
 }
 /* --------------------------------------------------- Hamburger ----------------------------------------*/
@@ -114,6 +118,7 @@ main {
 .portfolioContainer {
   margin: 0;
   min-width: 20%;
+  padding: 20px;
 }
 
 .portfolioBloc {
@@ -172,13 +177,31 @@ main {
 /* --------------------------------------------------- Contact ----------------------------------------*/
 .contactContainer {
   margin: 0;
+  min-width: 20%;
+  padding: 20px;
 }
+
+.contactBloc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 form {
-  margin-top: 20px;
+  max-width: 900px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid #5e5e60 3px;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .formRow {
-  margin: 10px 0 20px 0;
+  margin: 10px 20px 20px 10px;
 }
 .form-control {
   max-width: 500px;
@@ -187,7 +210,42 @@ form {
 
 .formInput {
   padding: 15px 10px;
+  background-color: white;
 }
+
+.firstNameInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.lastNameInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.emailInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.phoneInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.messageInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+}
+
+.submitButton {
+  width: 100%;
+}
+
 /* --------------------------------------------------- Media Screen ----------------------------------------*/
 
 @media (max-width: 768px) {
@@ -233,6 +291,10 @@ form {
     flex-direction: column;
     padding: 20px;
     gap: 3rem;
+  }
+
+  form {
+    flex-direction: column;
   }
 }
 

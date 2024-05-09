@@ -1,50 +1,64 @@
 function Contact() {
   return (
     <div className="contactContainer">
-      <div className="container">
+      <h2>Contact</h2>
+      <div className="contactBloc">
         <form>
           <div className="row formRow">
-            <div className="col-6">
+            <div className="firstNameInput">
               <input
                 type="text"
                 name="name"
                 className="form-control formInput"
-                placeholder="Name"
+                placeholder="Firstname*"
               ></input>
             </div>
-            <div className="col-6">
+          </div>
+          <div className="row formRow">
+            <div className="lastNameInput">
+              <input
+                type="text"
+                name="Lastname"
+                className="form-control formInput"
+                placeholder="Lastname*"
+              ></input>
+            </div>
+          </div>
+          <div className="row formRow">
+            <div className="emailInput">
               <input
                 type="email"
                 name="email"
                 className="form-control formInput"
-                placeholder="Email address"
+                placeholder="Email address*"
               ></input>
             </div>
           </div>
-
           <div className="row formRow">
-            <div className="col">
+            <div className="phoneInput">
               <input
                 type="text"
-                name="subject"
+                name="phone"
                 className="form-control formInput"
-                placeholder="Subject"
+                placeholder="Phone Number"
               ></input>
             </div>
           </div>
-
-          <div className="row formRow">
-            <div className="col">
-              <textarea
-                rows={3}
-                name="message"
-                className="form-control formInput"
-                placeholder="Message"
-              ></textarea>
+          <div>
+            <div className="row formRow">
+              <div className="messageInput">
+                <textarea
+                  rows={3}
+                  name="message"
+                  className="form-control formInput"
+                  placeholder="Message*"
+                ></textarea>
+              </div>
             </div>
           </div>
-
-          <button type="submit">Submit</button>
+          <div className="submitButton">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>

@@ -36,31 +36,31 @@ h3 {
 }
 
 .light-theme {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme main {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme .accueilContainer {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme .navBar {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme .blocInfo {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme .myName {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
 }
 
 .light-theme .myTitle {
-  background-color: black;
+  background-color: rgb(111, 109, 109);
   color: #fff;
 }
 

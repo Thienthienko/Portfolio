@@ -1,36 +1,32 @@
-function LazyFlicks() {
+function Kaleien() {
   return (
     <div className="projectContainer">
       <div className="mobileMockup">
-        <img src="./src/assets/lazyflicks-mobile.png" />
+        <img src="./src/assets/kaleien-mobile.png" />
       </div>
       <div className="deskMockup">
-        <img src="./src/assets/lazeyflicks-desk.png" />
+        <img src="./src/assets/kaleien-desk.png" />
       </div>
       <div className="projectDesc">
-        <h2>LazyFlicks</h2>
+        <h2>Kaleien Quiz</h2>
         <p className="description">
-          Création d&apos;une application Front-End - HTML - CSS - JAVASCRIPT -
-          REACT
+          Création d&apos;une application Front-End - HTML - CSS - JAVASCRIPT
         </p>
+        <p className="description">En collaboration avec 2 développeurs </p>
         <p className="description">
-          Application : Suggestion de film ou de série via l&apos;API The Movie
-          Data Base en fonction du genre, du type et du plus populaire du
-          moment.
+          Application : Quiz de 10 questions de culture générale avec une
+          personnalisation de son pseudo et de son avatar
         </p>
+        <p className="description">Environnement :</p>
         <div className="logoHardSkill">
           <img src="./src/assets/html.png" />
           <img src="./src/assets/css.png" />
           <img src="./src/assets/javascript.png" />
           <img src="./src/assets/github.png" />
           <img src="./src/assets/git.png" />
-          <img src="./src/assets/react.png" />
         </div>
         <p className="description">
-          <a
-            href="https://github.com/WildCodeSchool-2024-02/JS-lyon-0224-P2-lazy_flicks"
-            target="blank"
-          >
+          <a href="https://github.com/wilderLPM/P1lesEwoks" target="blank">
             /Code source
           </a>
         </p>
@@ -39,4 +35,4 @@ function LazyFlicks() {
   );
 }
 
-export default LazyFlicks;
+export default Kaleien;
