@@ -7,6 +7,13 @@
   font-family: "Raleway";
   src: url(./assets/fonts/Raleway-VariableFont_wght.ttf) format("truetype");
 }
+
+main {
+  text-align: center;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
 /* --------------------------------------------------- Navbar ----------------------------------------*/
 .navBar {
   width: 100%;
@@ -19,7 +26,15 @@
 }
 
 .logoTn {
-  width: 30%;
+  width: 80%;
+}
+
+.linkLogo {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  align-items: center;
+  height: 50px;
 }
 /* --------------------------------------------------- Hamburger ----------------------------------------*/
 
@@ -179,10 +194,17 @@ form {
   #root {
     text-align: center;
   }
+
+  .accueilContainer {
+    max-width: 600px;
+  }
+
   .navBar {
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    gap: 10rem;
   }
+
   .menu.closed {
     display: none;
   }
@@ -243,4 +265,54 @@ form {
     align-items: center;
     margin-top: 100px;
   }
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 35px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #cacaca;
+}
+
+input:checked + label:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 35px;
+}
+
+.check {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }

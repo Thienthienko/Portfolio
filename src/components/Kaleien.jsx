@@ -25,7 +25,7 @@ function Kaleien() {
         </div>
         <p className="description">
           <a href="https://github.com/wilderLPM/P1lesEwoks" target="blank">
-            Code source
+            /Code source
           </a>
         </p>
       </div>

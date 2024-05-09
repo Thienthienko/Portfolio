@@ -1,7 +1,6 @@
 main {
   width: 150vh;
   text-align: center;
-  background-color: white;
   font-family: "Roboto", sans-serif;
 }
 
@@ -18,7 +17,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  background-color: white;
   width: 100%;
 }
 
@@ -37,22 +35,61 @@ h3 {
   color: #3b3b40;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.light-theme {
+  background-color: black;
+}
+
+.light-theme main {
+  background-color: black;
+}
+
+.light-theme .accueilContainer {
+  background-color: black;
+}
+
+.light-theme .navBar {
+  background-color: black;
+}
+
+.light-theme .blocInfo {
+  background-color: black;
+}
+
+.light-theme .myName {
+  background-color: black;
+}
+
+.light-theme .myTitle {
+  background-color: black;
+  color: #fff;
+}
+
+.light-theme .description {
   color: white;
 }
-button:hover {
-  border-color: #646cff;
+
+.light-theme h2 {
+  color: white;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.light-theme a {
+  color: white;
+}
+
+.light-theme body {
+  background-color: black;
+}
+
+.light-theme .mobileMockup img {
+  filter: drop-shadow(3px 3px 2px rgb(255, 255, 255));
+  width: 80%;
+}
+
+.light-theme .deskMockup img {
+  filter: drop-shadow(1px -2px 5px rgb(255, 255, 255));
+  width: 100%;
+}
+
+.light-theme .logoHardSkill img {
+  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
 }

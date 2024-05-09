@@ -31,7 +31,7 @@ function LazyFlicks() {
             href="https://github.com/WildCodeSchool-2024-02/JS-lyon-0224-P2-lazy_flicks"
             target="blank"
           >
-            Code source
+            /Code source
           </a>
         </p>
       </div>
