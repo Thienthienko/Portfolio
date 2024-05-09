@@ -1,5 +1,6 @@
 import Kaleien from "../components/kaleien/Kaleien";
 import LazyFlicks from "../components/lazyflicks/LazyFlicks";
+import LignesUrbaines from "../components/lignes/LignesUrbaines";
 
 function Portfolio() {
   return (
@@ -8,6 +9,7 @@ function Portfolio() {
       <div className="portfolioBloc">
         <Kaleien />
         <LazyFlicks />
+        <LignesUrbaines />
       </div>
     </div>
   );

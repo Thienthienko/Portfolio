@@ -1,23 +1,21 @@
 function Kaleien() {
   return (
     <div className="projectContainer">
-      <div className="mobileMockup">
-        <img src="./src/assets/kaleien-mobile.png" />
-      </div>
-      <div className="deskMockup">
-        <img src="./src/assets/kaleien-desk.png" />
+      <div className="mobileDesktop">
+        <div className="mobileMockup">
+          <img src="./src/assets/kaleien-mobile.png" />
+        </div>
+        <div className="deskMockup">
+          <img src="./src/assets/kaleien-desk.png" />
+        </div>
       </div>
       <div className="projectDesc">
         <h2>Kaleien Quiz</h2>
-        <p className="description">
-          Création d&apos;une application Front-End - HTML - CSS - JAVASCRIPT
-        </p>
-        <p className="description">En collaboration avec 2 développeurs </p>
+        <p className="description">Création d&apos;une application Front-End</p>
         <p className="description">
           Application : Quiz de 10 questions de culture générale avec une
           personnalisation de son pseudo et de son avatar
         </p>
-        <p className="description">Environnement :</p>
         <div className="logoHardSkill">
           <img src="./src/assets/html.png" />
           <img src="./src/assets/css.png" />

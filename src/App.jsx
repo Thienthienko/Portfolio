@@ -9,7 +9,7 @@ function App() {
   return (
     <div className={`app ${lightMode !== false && "light-theme"}`}>
       <Navbar />
-      <main>
+      <main className="mainContainer">
         <Outlet />
       </main>
     </div>

@@ -1,11 +1,11 @@
 function Accueil() {
   return (
     <div className="accueilContainer">
+      <div className="myName">
+        <h2>Hello, my name is Thien NGUYEN</h2>
+      </div>
       <div className="infoAvatar">
         <div className="blocInfo">
-          <div className="myName">
-            <h2>Hello, my name is Thien NGUYEN</h2>
-          </div>
           <div className="myTitle">
             <h2>I am fullstack Web & Mobile developper</h2>
           </div>

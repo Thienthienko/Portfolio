@@ -1,5 +1,4 @@
 main {
-  width: 150vh;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
@@ -39,7 +38,11 @@ h3 {
   background-color: rgb(111, 109, 109);
 }
 
-.light-theme main {
+.light-theme body {
+  background-color: rgb(111, 109, 109);
+}
+
+.light-theme .mainContainer {
   background-color: rgb(111, 109, 109);
 }
 
@@ -82,12 +85,10 @@ h3 {
 
 .light-theme .mobileMockup img {
   filter: drop-shadow(3px 3px 2px rgb(255, 255, 255));
-  width: 80%;
 }
 
 .light-theme .deskMockup img {
   filter: drop-shadow(1px -2px 5px rgb(255, 255, 255));
-  width: 100%;
 }
 
 .light-theme .logoHardSkill img {
