@@ -1,6 +1,13 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
 main {
   text-align: center;
   font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100%;
 }
 
 a {
@@ -16,7 +23,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 h1 {
@@ -38,16 +44,33 @@ h3 {
   background-color: rgb(111, 109, 109);
 }
 
+.light-theme main {
+  background-color: rgb(111, 109, 109);
+  height: 100vh;
+}
+
 .light-theme body {
   background-color: rgb(111, 109, 109);
 }
 
 .light-theme .mainContainer {
   background-color: rgb(111, 109, 109);
+  height: 100%;
 }
 
 .light-theme .accueilContainer {
   background-color: rgb(111, 109, 109);
+  height: 100vh;
+}
+
+.light-theme .contactContainer {
+  background-color: rgb(111, 109, 109);
+  height: 100vh;
+}
+
+.light-theme .contactBloc {
+  background-color: rgb(111, 109, 109);
+  height: 100%;
 }
 
 .light-theme .navBar {
