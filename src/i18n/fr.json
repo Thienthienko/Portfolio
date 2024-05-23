@@ -1,0 +1,23 @@
+{
+  "common": {
+    "translate-button": "FR",
+    "translate-home": "Accueil",
+    "translate-project": "Portfolio",
+    "translated-text": "C'est du français",
+    "translated-hello": "Salut, moi c'est Thien NGUYEN",
+    "translated-title": "Développeur web & mobile junior",
+    "translated-resume": "Voir mon cv",
+    "translated-passion": "Passionné de développement Web & Mobile, je recherche des opportunités pour apprendre et progresser dans ce domaine dynamique. Mes contributions à des projets comme un quiz interactif et une application de recommandation de films m'ont permis de maîtriser HTML, CSS, JavaScript, React et REST API.",
+    "translated-responsability": "Ayant occupé des postes de responsabilité chez Stratech - Metair Lab - SGS France, j&apos;ai développé des compétences en planification, en stratégie et en gestion de projet, des atouts précieux pour relever des défis complexes.",
+    "translated-formation": "Titulaire d'une formation intensive en développement Web & Mobile à la Wild Code School ainsi que d'une formation complémentaire en multimédia/web, je suis motivé pour continuer à apprendre et à évoluer dans un environnement dynamique.",
+    "translated-first": "Prénom*",
+    "translated-last": "Nom*",
+    "translated-mail": "Email*",
+    "translated-number": "Numéro de téléphone*",
+    "translated-submit": "Envoyer",
+    "translated-kaleien1": "Création d'une application Front-End",
+    "translated-kaleien2": "Application : Quiz de 10 questions de culture générale avec une personnalisation de son pseudo et de son avatar.",
+    "translated-lazyflicks1": "Création d'une application Front-End à l'aide des méthodes agiles/SCRUM",
+    "translated-lazyflicks2": "Application : Suggestion de film ou de série via l'API TMDB en fonction du genre, du type et du plus populaire du moment."
+  }
+}

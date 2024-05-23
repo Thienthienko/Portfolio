@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function LazyFlicks() {
+  const { t } = useTranslation();
   return (
     <div className="projectContainer">
       <div className="mobileDesktop">
@@ -11,14 +14,8 @@ function LazyFlicks() {
       </div>
       <div className="projectDesc">
         <h2>LazyFlicks</h2>
-        <p className="description">
-          Création d&apos;une application Front-End à l&apos;aide des méthodes
-          agiles/SCRUM
-        </p>
-        <p className="description">
-          Application : Suggestion de film ou de série via l&apos;API TMDB en
-          fonction du genre, du type et du plus populaire du moment.
-        </p>
+        <p className="description">{t("common.translated-lazyflicks1")}</p>
+        <p className="description">{t("common.translated-lazyflicks2")}</p>
         <div className="logoHardSkill">
           <img src="./src/assets/html.png" />
           <img src="./src/assets/css.png" />

@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className="contactContainer">
       <h2>Contact</h2>
@@ -10,7 +14,7 @@ function Contact() {
                 type="text"
                 name="name"
                 className="form-control formInput"
-                placeholder="Firstname*"
+                placeholder={t("common.translated-first")}
               ></input>
             </div>
           </div>
@@ -20,7 +24,7 @@ function Contact() {
                 type="text"
                 name="Lastname"
                 className="form-control formInput"
-                placeholder="Lastname*"
+                placeholder={t("common.translated-last")}
               ></input>
             </div>
           </div>
@@ -30,7 +34,7 @@ function Contact() {
                 type="email"
                 name="email"
                 className="form-control formInput"
-                placeholder="Email address*"
+                placeholder={t("common.translated-mail")}
               ></input>
             </div>
           </div>
@@ -40,7 +44,7 @@ function Contact() {
                 type="text"
                 name="phone"
                 className="form-control formInput"
-                placeholder="Phone Number"
+                placeholder={t("common.translated-number")}
               ></input>
             </div>
           </div>
@@ -57,7 +61,7 @@ function Contact() {
             </div>
           </div>
           <div className="submitButton">
-            <button type="submit">Submit</button>
+            <button type="submit">{t("common.translated-submit")}</button>
           </div>
         </form>
       </div>

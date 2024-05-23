@@ -96,6 +96,12 @@
   justify-content: center;
 }
 
+.blocDescription {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
 .myName {
   background-color: white;
 }
@@ -110,7 +116,7 @@
 }
 
 .avatar img {
-  filter: drop-shadow(10px 7px 10px rgb(182, 182, 182));
+  filter: drop-shadow(2px 5px 10px rgb(182, 182, 182));
   width: 60%;
 }
 
@@ -118,6 +124,49 @@
   font-family: "Montserrat";
   margin: 8px;
   color: #5e5e60;
+  display: flex;
+}
+
+.logoLink {
+  width: 30%;
+}
+
+.descriptionHome1,
+.descriptionHome2,
+.descriptionHome3 {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  border: solid #5e5e60 3px;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.descriptionHome1 img {
+  width: 50%;
+}
+
+.descriptionHome2 img {
+  width: 50%;
+}
+
+.descriptionHome3 img {
+  width: 50%;
+}
+
+.descriptionHome1.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
+}
+.descriptionHome2.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
+}
+.descriptionHome3.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
 }
 
 /* --------------------------------------------------- Portfolio ----------------------------------------*/
@@ -320,6 +369,11 @@ form {
   form {
     flex-direction: column;
   }
+
+  .blocDescription {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 769px) {
@@ -401,4 +455,9 @@ label:active:after {
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+select {
+  border: solid grey 1px;
+  border-radius: 10%;
 }

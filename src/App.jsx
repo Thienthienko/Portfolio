@@ -6,6 +6,7 @@ import { LightModeContext } from "./components/ThemeContext";
 
 function App() {
   const { lightMode } = useContext(LightModeContext);
+
   return (
     <div className={`app ${lightMode !== false && "light-theme"}`}>
       <Navbar />

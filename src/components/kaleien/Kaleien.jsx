@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function Kaleien() {
+  const { t } = useTranslation();
   return (
     <div className="projectContainer">
       <div className="mobileDesktop">
@@ -11,11 +14,8 @@ function Kaleien() {
       </div>
       <div className="projectDesc">
         <h2>Kaleien Quiz</h2>
-        <p className="description">Création d&apos;une application Front-End</p>
-        <p className="description">
-          Application : Quiz de 10 questions de culture générale avec une
-          personnalisation de son pseudo et de son avatar
-        </p>
+        <p className="description">{t("common.translated-kaleien1")}</p>
+        <p className="description">{t("common.translated-kaleien2")}</p>
         <div className="logoHardSkill">
           <img src="./src/assets/html.png" />
           <img src="./src/assets/css.png" />
