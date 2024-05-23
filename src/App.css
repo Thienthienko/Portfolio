@@ -15,8 +15,17 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
   justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  background-color: #3b3b40;
+  z-index: 999;
+}
+
+.navBar h2 {
+  color: white;
 }
 
 .logoTn {
@@ -69,6 +78,7 @@
 /* --------------------------------------------------- ACCUEIL ----------------------------------------*/
 .accueilContainer {
   margin: 0;
+  margin-top: 80px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -175,6 +185,7 @@
   margin: 0;
   min-width: 20%;
   padding: 20px;
+  margin-top: 80px;
 }
 
 .portfolioBloc {
@@ -242,6 +253,7 @@
   margin: 0;
   min-width: 20%;
   padding: 20px;
+  margin-top: 80px;
 }
 
 .contactBloc {
