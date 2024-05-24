@@ -11,43 +11,33 @@
 /* --------------------------------------------------- Navbar ----------------------------------------*/
 .navBar {
   width: 100vw;
-  height: 50px;
+  height: 30px;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  justify-content: space-evenly;
+  padding: 1rem 3rem 1rem 3rem;
+  justify-content: space-between;
   position: fixed;
   top: 0;
-  background-color: #3b3b40;
+  background-color: #6c733d;
   z-index: 999;
 }
 
 .navBar h2 {
   color: white;
+  font-size: small;
 }
 
 .logoTn {
-  width: 80%;
+  width: 100%;
 }
 
 .linkLogo {
   margin: 0;
   padding: 0;
-  width: 10%;
-  align-items: center;
-  height: 50px;
-}
-
-.toggle-wrapper {
-  position: relative;
-  height: 50px;
 }
 
 .toggle-wrapper img {
-  position: absolute;
-  height: 50px;
+  height: 35px;
 }
 /* --------------------------------------------------- Hamburger ----------------------------------------*/
 
@@ -64,7 +54,7 @@
   width: 2rem;
   height: 0.25rem;
   border-radius: 10px;
-  background-color: #3b3b40;
+  background-color: white;
   transform-origin: 1px;
   transition: all 0.3s linear;
 }
@@ -79,31 +69,53 @@
 .accueilContainer {
   margin: 0;
   margin-top: 80px;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .infoAvatar {
-  max-width: 900px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  border: solid #5e5e60 3px;
   margin: 20px;
-  border-radius: 10px;
+
+  background-color: #6c733d;
+}
+
+.history {
+  color: white;
+  width: 60%;
+  text-align: center;
+  font-family: "Raleway";
 }
 
 .blocInfo {
   background-color: rgb(251, 254, 254);
   display: flex;
-  flex-direction: column;
-  width: 400px;
-  text-align: left;
+  flex-direction: row;
+  width: 100%;
   justify-content: center;
+  gap: 3rem;
+}
+
+.icon {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logoLink {
+  width: 30px;
 }
 
 .blocDescription {
@@ -123,22 +135,12 @@
 .avatar {
   display: flex;
   justify-content: center;
+  margin: 30px 0px 30px 0px;
 }
 
 .avatar img {
   filter: drop-shadow(2px 5px 10px rgb(182, 182, 182));
   width: 60%;
-}
-
-.description {
-  font-family: "Montserrat";
-  margin: 8px;
-  color: #5e5e60;
-  display: flex;
-}
-
-.logoLink {
-  width: 30%;
 }
 
 .descriptionHome1,
@@ -147,14 +149,38 @@
   font-family: "Montserrat";
   margin: 8px;
   color: #5e5e60;
-  border: solid #5e5e60 3px;
   border-radius: 10px;
   padding: 1rem;
-  min-width: 250px;
+  max-width: 300px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  background-color: white;
+}
+
+.techno {
+  width: 100%;
+  text-align: center;
+}
+
+.descriptionOutils {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #6c733d;
+}
+.descriptionOutils img {
+  width: 50%;
 }
 
 .descriptionHome1 img {
@@ -179,6 +205,14 @@
   --animate-duration: 2s;
 }
 
+.animate__animated.animate__zoomIn {
+  --animate-duration: 1s;
+}
+/* --------------------------------------------------- Footer ----------------------------------------*/
+
+.footerText {
+  color: #6c733d;
+}
 /* --------------------------------------------------- Portfolio ----------------------------------------*/
 
 .portfolioContainer {
@@ -333,10 +367,24 @@ form {
   }
 
   .navBar {
-    align-items: center;
+    width: 100%;
     justify-content: center;
-    gap: 10rem;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
   }
+
+  /*.navBar {
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem 1rem 3rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #6c733d;
+    z-index: 999;
+  }*/
 
   .menu.closed {
     display: none;
@@ -346,16 +394,25 @@ form {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 85px;
+    top: 60px;
     left: 0;
-    background-color: #fff;
+    background-color: #6c733d;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: solid black 1px;
+    gap: 5px;
+    padding: 5px 0px 5px 0px;
+  }
+  .menu.open h2 {
+    color: #fff;
+    font-size: large;
   }
 
   .Hamburger {
     display: block;
+  }
+
+  .linkLogo {
+    display: none;
   }
 
   .avatar {
@@ -402,6 +459,7 @@ form {
     display: flex;
     height: 100%;
     gap: 3rem;
+    padding-right: 100px;
   }
 
   .menu.open {
@@ -430,7 +488,7 @@ label {
   text-indent: -9999px;
   width: 35px;
   height: 20px;
-  background: grey;
+  background: white;
   display: block;
   border-radius: 100px;
   position: relative;
@@ -443,7 +501,7 @@ label:after {
   left: 1px;
   width: 18px;
   height: 18px;
-  background: #fff;
+  background: #9da65d;
   border-radius: 90px;
   transition: 0.3s;
 }
@@ -472,4 +530,5 @@ label:active:after {
 select {
   border: solid grey 1px;
   border-radius: 10%;
+  color: #6c733d;
 }
