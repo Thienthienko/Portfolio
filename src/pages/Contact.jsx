@@ -1,7 +1,15 @@
+import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 function Contact() {
   const { t } = useTranslation();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+  console.log(errors);
 
   return (
     <div className="contactContainer">
@@ -12,40 +20,47 @@ function Contact() {
             <div className="firstNameInput">
               <input
                 type="text"
-                name="name"
                 className="form-control formInput"
                 placeholder={t("common.translated-first")}
-              ></input>
+                {...register("Prénom", { required: true })}
+              />
             </div>
           </div>
           <div className="row formRow">
             <div className="lastNameInput">
               <input
                 type="text"
-                name="Lastname"
                 className="form-control formInput"
                 placeholder={t("common.translated-last")}
-              ></input>
+                {...register("Nom", { required: true })}
+              />
             </div>
           </div>
           <div className="row formRow">
             <div className="emailInput">
               <input
-                type="email"
-                name="email"
+                type="text"
                 className="form-control formInput"
                 placeholder={t("common.translated-mail")}
-              ></input>
+                {...register("Email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
             </div>
           </div>
           <div className="row formRow">
             <div className="phoneInput">
               <input
-                type="text"
-                name="phone"
+                type="tel"
                 className="form-control formInput"
                 placeholder={t("common.translated-number")}
-              ></input>
+                {...register("Téléphone", {
+                  required: true,
+                  maxLength: 12,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
             </div>
           </div>
           <div>
@@ -53,10 +68,10 @@ function Contact() {
               <div className="messageInput">
                 <textarea
                   rows={3}
-                  name="message"
                   className="form-control formInput"
                   placeholder="Message*"
-                ></textarea>
+                  {...register("Message", { required: true })}
+                />
               </div>
             </div>
           </div>
