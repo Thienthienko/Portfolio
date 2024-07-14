@@ -1,5 +1,20 @@
-$dark-theme: rgb(40, 40, 40);
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(./assets/fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+$dark-theme: #202426;
 $font-family: "Roboto", sans-serif;
+$blackgreen: #458c72;
+$darkgreen: #29a678;
+$middlegreen: #36d99d;
+$lightgreen: #30f2ab;
+$grey: #3c3c40;
 
 #root {
   width: 100vw;
@@ -9,14 +24,20 @@ $font-family: "Roboto", sans-serif;
 main {
   text-align: center;
   font-family: $font-family;
-  width: 100vw;
   height: 100%;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
 }
 
 a {
   color: #3b3b40;
   text-decoration: inherit;
   font-family: $font-family;
+  margin: 0;
+  padding: 0;
 }
 a:hover {
   color: grey;
@@ -29,22 +50,40 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  line-height: 1.1;
+  color: $blackgreen;
 }
 
 h2 {
-  color: #3b3b40;
+  color: $darkgreen;
   font-family: "Raleway";
   margin: 0;
 }
 
 h3 {
-  color: #3b3b40;
+  color: $blackgreen;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  text-align: left;
 }
+
+h4 {
+  color: $blackgreen;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+}
+
+// ---------------------------------------- Dark Theme --------------------------------------------------//
 
 .light-theme {
   background-color: $dark-theme;
+}
+
+.light-theme h1 {
+  color: white;
 }
 
 .light-theme main {
@@ -84,6 +123,10 @@ h3 {
   background-color: $dark-theme;
 }
 
+.light-theme .infoAvatar {
+  background-color: #8c8c88;
+}
+
 .light-theme .myName {
   background-color: $dark-theme;
 }
@@ -95,17 +138,33 @@ h3 {
 
 .light-theme .blocDescription p {
   color: white;
+  background-color: $dark-theme;
 }
 
 .light-theme .description {
   color: white;
 }
 
-.light-theme .descriptionHome {
+.light-theme .descriptionHome1.animate__animated.animate__bounceIn {
+  background-color: $dark-theme;
+}
+
+.light-theme .descriptionHome1 h3 {
+  color: white;
+  background-color: $dark-theme;
+}
+
+.light-theme .technoContainer {
+  background-color: $dark-theme;
+}
+
+.light-theme .technoContainer .technoTitle {
   color: white;
 }
 
-.light-theme h2 {
+.light-theme h2,
+h4,
+p {
   color: white;
 }
 
@@ -129,11 +188,849 @@ h3 {
   filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
 }
 
-.light-theme .linkLogo {
-  filter: drop-shadow(2px 2px 3px rgb(255, 255, 255));
-}
-
 .light-theme .open {
   background-color: $dark-theme;
   color: white;
+}
+
+.light-theme input:checked + label {
+  background: white;
+}
+
+.light-theme label:after {
+  background: #8c8c88;
+}
+
+/* --------------------------------------------------- Navbar ----------------------------------------*/
+.navBar {
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 3rem 1rem 3rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: $blackgreen;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.navBar h2 {
+  color: white;
+  font-size: small;
+}
+
+.logoTn {
+  width: 100%;
+}
+
+.linkLogo {
+  margin: 0;
+  padding: 0;
+}
+
+.toggle-wrapper img {
+  height: 35px;
+}
+/* --------------------------------------------------- Hamburger ----------------------------------------*/
+
+.hamburger {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+}
+
+.burger {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: white;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --------------------------------------------------- ACCUEIL ----------------------------------------*/
+.accueilContainer {
+  margin: 0;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoAvatar {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $blackgreen;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.history {
+  color: $darkgreen;
+  width: 200px;
+  text-align: center;
+  font-family: "Raleway";
+}
+
+.history p {
+  text-align: justify;
+  width: 100vw;
+}
+
+.blocInfo {
+  background-color: rgb(251, 254, 254);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.icon {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gitLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1px;
+}
+
+.gitLink a {
+  width: 100px;
+}
+
+.logoLink {
+  width: 30%;
+}
+
+.blocDescription {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.myName {
+  background-color: white;
+}
+
+.myTitle {
+  background-color: white;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 30px 0px;
+}
+
+.avatar img {
+  filter: drop-shadow(2px 5px 10px rgb(182, 182, 182));
+  width: 30%;
+}
+
+.descriptionHome1,
+.descriptionHome2,
+.descriptionHome3 {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 80vw;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: white;
+}
+
+.descriptionHome1 p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+.technoContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.techno {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  width: 70vw;
+}
+
+.technoTitle {
+  color: $darkgreen;
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 12px;
+}
+
+.technoIcon {
+  height: 80%;
+}
+
+.descriptionOutils {
+  font-family: "Montserrat";
+  margin: 8px;
+  color: #5e5e60;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: $blackgreen;
+}
+.descriptionOutils img {
+  width: 50%;
+}
+
+.descriptionHome1.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
+}
+.descriptionHome2.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
+}
+.descriptionHome3.animate__animated.animate__bounceIn {
+  --animate-duration: 2s;
+}
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 1s;
+}
+/* --------------------------------------------------- Footer ----------------------------------------*/
+footer {
+  background-color: $blackgreen;
+  width: 100vw;
+}
+
+.footerText {
+  color: white;
+}
+/* --------------------------------------------------- Portfolio ----------------------------------------*/
+
+.portfolioContainer {
+  margin: 0;
+  min-width: 20%;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.portfolioBloc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.projectContainer {
+  border: solid #5e5e60 3px;
+  max-width: 400px;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.titleKaleien {
+  width: 100%;
+}
+
+.mobileDesktop {
+  display: flex;
+  flex-direction: row;
+}
+
+.deskMockup {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectDesc {
+  width: 100%;
+  text-align: center;
+}
+
+.logoHardSkill {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logoHardSkill img {
+  width: 10%;
+}
+
+.work h2 {
+  font-size: 2.1875rem;
+  font-weight: 800;
+  line-height: 2.1875rem;
+  color: white;
+  text-align: center;
+}
+
+.work {
+  height: 100%;
+}
+
+.work p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  color: white;
+  text-align: center;
+}
+
+.work figure {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.work .backgroundDesk {
+  width: 100%;
+}
+
+.work figure figcaption,
+.work figure .info {
+  position: absolute;
+  height: 280px;
+  width: 380px;
+  top: -3rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: -2rem;
+  background-color: $darkgreen;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  border-radius: 5px;
+}
+
+.work figure figcaption:hover,
+.work figure .info:hover {
+  opacity: 0.9;
+}
+
+.work figure figcaption h3,
+.work figure figcaption h4,
+.work figure .info h3,
+.work figure .info h4 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.work figure figcaption h3,
+.work figure .info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: white;
+}
+
+.work figure figcaption h4,
+.work figure .info h4 {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  color: white;
+}
+
+.work figure figcaption a,
+.work figure .info a {
+  display: block;
+  margin: auto;
+  color: white;
+}
+/* --------------------------------------------------- Contact ----------------------------------------*/
+.contactContainer {
+  margin: 0;
+  min-width: 20%;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.contactBloc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form {
+  max-width: 900px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid #5e5e60 3px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.formRow {
+  margin: 10px 20px 20px 10px;
+}
+.form-control {
+  max-width: 500px;
+  max-height: 200px;
+}
+
+.formInput {
+  padding: 15px 10px;
+  background-color: white;
+}
+
+.firstNameInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.lastNameInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.emailInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.phoneInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.messageInput input {
+  border: solid #3b3b40 2px;
+  border-radius: 5px;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+/* --------------------------------------------------- Media Screen ----------------------------------------*/
+
+@media (max-width: 768px) {
+  #root {
+    text-align: center;
+  }
+
+  .navBar {
+    width: 100vw;
+    justify-content: center;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+  }
+
+  /*.navBar {
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem 1rem 3rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #6c733d;
+    z-index: 999;
+  }*/
+
+  .menu.closed {
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: $blackgreen;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+    padding: 5px 0px 5px 0px;
+  }
+  .menu.open h2 {
+    color: #fff;
+    font-size: large;
+  }
+
+  .Hamburger {
+    display: block;
+  }
+
+  .linkLogo {
+    display: none;
+  }
+
+  .avatar {
+    justify-content: center;
+  }
+
+  .projectContainer {
+    flex-direction: column;
+    padding: 20px;
+    gap: 3rem;
+    max-width: 300px;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobileDesktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .blocDescription {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .navBar {
+    gap: 2rem;
+  }
+  .menu {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu.closed {
+    display: flex;
+    height: 100%;
+    gap: 3rem;
+    padding-right: 100px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .Hamburger {
+    display: none;
+  }
+
+  .infoAvatar {
+    width: 100vw;
+    align-items: center;
+  }
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 35px;
+  height: 20px;
+  background: white;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  background: $blackgreen;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #cacaca;
+}
+
+input:checked + label:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 35px;
+}
+
+.check {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+select {
+  border: solid grey 1px;
+  border-radius: 10%;
+  color: $blackgreen;
+}
+
+/* --------------------------------------------------- CV Animation ----------------------------------------*/
+
+.portfolio-experiment {
+  padding-top: 0rem;
+}
+
+.portfolio-experiment a {
+  color: $darkgreen;
+  padding: 0.4em calc(0.4em * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.portfolio-experiment a .text {
+  font-family: $font-family;
+  -webkit-transform: translate3d(0, 0.4em, 0);
+  transform: translate3d(0, 0.4em, 0);
+  display: block;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s,
+    -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+
+.portfolio-experiment a:after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: calc(0.4em * 1.2);
+  right: calc(0.4em * 1.2);
+  height: 3px;
+  background: $blackgreen;
+  -webkit-transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+  transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+    right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+    right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+    -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.portfolio-experiment .line {
+  position: absolute;
+  background: $blackgreen;
+}
+
+.portfolio-experiment .line.-right,
+.portfolio-experiment .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  -webkit-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
+}
+
+.portfolio-experiment .line.-top,
+.portfolio-experiment .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+}
+
+.portfolio-experiment .line.-right {
+  right: -3px;
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01)
+    0.23s;
+  transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s,
+    -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+.portfolio-experiment .line.-top {
+  top: -3px;
+  -webkit-transition: -webkit-transform 0.08s linear 0.43s;
+  transition: -webkit-transform 0.08s linear 0.43s;
+  transition: transform 0.08s linear 0.43s;
+  transition: transform 0.08s linear 0.43s, -webkit-transform 0.08s linear 0.43s;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.portfolio-experiment .line.-left {
+  left: -3px;
+  -webkit-transition: -webkit-transform 0.08s linear 0.51s;
+  transition: -webkit-transform 0.08s linear 0.51s;
+  transition: transform 0.08s linear 0.51s;
+  transition: transform 0.08s linear 0.51s, -webkit-transform 0.08s linear 0.51s;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+
+.portfolio-experiment .line.-bottom {
+  bottom: -3px;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01),
+    -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+.portfolio-experiment a:hover .text,
+.portfolio-experiment a:active .text {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s,
+    -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+
+.portfolio-experiment a:hover:after,
+.portfolio-experiment a:active:after {
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s,
+    -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s,
+    -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+    right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+    right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s,
+    -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+}
+
+.portfolio-experiment a:hover .line,
+.portfolio-experiment a:active .line {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+.portfolio-experiment a:hover .line.-right,
+.portfolio-experiment a:active .line.-right {
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s,
+    -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+
+.portfolio-experiment a:hover .line.-top,
+.portfolio-experiment a:active .line.-top {
+  -webkit-transition: -webkit-transform 0.08s linear 0.4s;
+  transition: -webkit-transform 0.08s linear 0.4s;
+  transition: transform 0.08s linear 0.4s;
+  transition: transform 0.08s linear 0.4s, -webkit-transform 0.08s linear 0.4s;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+.portfolio-experiment a:hover .line.-left,
+.portfolio-experiment a:active .line.-left {
+  -webkit-transition: -webkit-transform 0.08s linear 0.48s;
+  transition: -webkit-transform 0.08s linear 0.48s;
+  transition: transform 0.08s linear 0.48s;
+  transition: transform 0.08s linear 0.48s, -webkit-transform 0.08s linear 0.48s;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+.portfolio-experiment a:hover .line.-bottom,
+.portfolio-experiment a:active .line.-bottom {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1)
+    0.56s;
+  transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s,
+    -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  -webkit-transform-origin: left;
+  transform-origin: left;
 }

@@ -7,11 +7,6 @@ function ToggleLogo() {
           src="./src/assets/Logo-TN-blanc.svg"
           alt="logo tn white"
         />
-        <img
-          className="inactive"
-          src="./src/assets/Logo-TN-noir.svg"
-          alt="logo tn black"
-        />
       </div>
     </div>
   );
