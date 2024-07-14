@@ -17,6 +17,7 @@ function Accueil() {
         <img
           className="animate__animated animate__zoomIn"
           src="./src/assets/ThienImg2.png"
+          alt="image de profil"
         />
       </div>
       <div className="infoAvatar">
@@ -36,7 +37,7 @@ function Accueil() {
               future carrière en développement web.
             </p>
             <p className="history">
-              je suis à la recherche d'une opportunité d'alternance pour
+              Je suis à la recherche d'une opportunité d'alternance pour
               septembre 2024 pour une durée de 15 mois.
             </p>
             <p className="history">
@@ -59,6 +60,7 @@ function Accueil() {
                     <img
                       className="logoLink"
                       src="./src/assets/githubMain.png"
+                      alt="logo github"
                     ></img>
                   </a>
                   <a
@@ -68,6 +70,7 @@ function Accueil() {
                     <img
                       className="logoLink"
                       src="./src/assets/linkedinMain.png"
+                      alt="logo linkedin"
                     ></img>
                   </a>
                 </section>
