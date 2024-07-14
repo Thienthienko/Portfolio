@@ -1,6 +1,7 @@
 import Kaleien from "../components/kaleien/Kaleien";
 import LazyFlicks from "../components/lazyflicks/LazyFlicks";
 import LignesUrbaines from "../components/lignes/LignesUrbaines";
+import Prodkat from "../components/prodkat/Prodkat";
 import { useTranslation } from "react-i18next";
 
 function Portfolio() {
@@ -11,6 +12,7 @@ function Portfolio() {
       <div className="portfolioBloc">
         <Kaleien />
         <LazyFlicks />
+        <Prodkat />
         <LignesUrbaines />
       </div>
     </div>
