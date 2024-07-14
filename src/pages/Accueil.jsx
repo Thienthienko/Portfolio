@@ -22,7 +22,6 @@ function Accueil() {
       <div className="infoAvatar">
         <section className="blocDescription">
           <div className="descriptionHome1 animate__animated animate__bounceIn">
-            {/* <img src="./src/assets/dev.png" /> */}
             <h3>A propos</h3>
             <p className="history">
               Actuellement en reconversion professionnelle après huit ans en
@@ -74,16 +73,7 @@ function Accueil() {
                 </section>
               </div>
             </div>
-            {/* {t("common.translated-passion")} */}
           </div>
-          {/* <p className="descriptionHome2 animate__animated animate__bounceIn animate__delay-1s">
-            <img src="./src/assets/forma.png" />
-            {t("common.translated-responsability")}
-          </p>
-          <p className="descriptionHome3 animate__animated animate__bounceIn animate__delay-2s">
-            <img src="./src/assets/resp.png" />
-            {t("common.translated-formation")}
-          </p> */}
         </section>
       </div>
       <section className="technoContainer">

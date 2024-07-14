@@ -11,10 +11,14 @@ function LignesUrbaines() {
               <img src="./src/assets/illustrator.png" />
               <img src="./src/assets/aftereffect.png" />
             </div>
+            <p className="description">
+              <a href="" target="blank">
+                Site web
+              </a>
+            </p>
           </div>
           <video className="backgroundDesk" controls>
             <source src="./src/assets/BG.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </figure>
       </section>
