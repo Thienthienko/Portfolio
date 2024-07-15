@@ -6,6 +6,7 @@ import Snotrac from "../components/snotrac/Snotrac";
 import Jessica from "../components/jessica/Jessica";
 import StudioAnae from "../components/studioanae/StudioAnae";
 import StudioAnaeParis from "../components/studioanae/StudioAnaeParis";
+import Wagd from "../components/wagd/Wagd";
 import { useTranslation } from "react-i18next";
 
 function Portfolio() {
@@ -21,6 +22,7 @@ function Portfolio() {
         <StudioAnae />
         <StudioAnaeParis />
         <Jessica />
+        <Wagd />
         <LignesUrbaines />
       </div>
     </div>
